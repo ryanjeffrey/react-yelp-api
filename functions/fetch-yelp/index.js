@@ -13,7 +13,6 @@ const handler = async (event) => {
       }
     );
     const data = await resp.json();
-    console.log(data);
     return {
       statusCode: 200,
       body: JSON.stringify(data.businesses),
@@ -25,7 +24,7 @@ const handler = async (event) => {
       statusCode: 500,
       body: JSON.stringify({ error: 'Failed fetching data' }),
     };
-  };
-}
+  }
+};
 
-module.exports = { handler }
+module.exports = { handler };
